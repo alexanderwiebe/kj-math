@@ -1,0 +1,19 @@
+<p>decomposition-friendly works!</p>
+<button (click)="regen()">Start</button>
+<div>
+  <span>{{augend}}</span>+<span>{{addend}}</span>=<span>?</span>
+</div>
+<div>
+  <h2>solving with decomposition</h2>
+  <button (click)="toggleAnswer()">Show Answer</button>
+  @if (showAns) {
+    <div>
+      <span>answer: </span>
+      @for (ans of answerStrings; track $index) {
+        <div>
+          <span>{{ans}}</span>
+        </div>
+      }
+    </div>
+  }
+</div>
